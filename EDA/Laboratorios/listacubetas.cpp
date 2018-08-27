@@ -20,39 +20,51 @@ vector<int> pedir(){
 void mostrar (matriz A){
 	for (int i=0;i< A.size();i++){
 		for (int j=0;j<A[0].size();j++){
-			cout<<A[i][j]<<" ";
+			cout<<A[i][j]<<"\t";
 		}
 		cout<<endl;
 	}
 	cout<<endl;
 }
-void cubetasort(vector<int> lista){
-	matriz proceso(5,vector<int>(10,0));
-	int numPro=3;
-	cout<<"lista creada"<<endl;
-	mostrar(proceso);
-	int div=1;
-	for (int i=0;i<numPro;i++){
-		for (int j=0;j<lista.size();j++){
-			int a=(lista[j]/div )% 10;
-			cout<<"digito: "<<lista[j]<<endl;
-			cout<<"numero: "<<a<<endl;
-			proceso[4][a]=lista[j];
+matriz cubetasort(matriz lista,int div){
+	int a;
+	matriz proceso(lista.size(),vector<int>(lista.size(),-1));
+	for (int i=0;i<lista.size();i++){
+		for (int j=lista.size()-1;j>=0;j--){
+			int aux=lista.size()-1;
+			if (lista[j][i]!=-1){
+				a=(lista[j][i]/div)%10;
+				cout<<"valor: "<<lista[j][i]<<endl;
+				while(proceso[aux][a]!=-1){
+					cout<<"auxiliar"<<aux<<" para: "<<a<<endl;
+					aux--;
+				}
+				cout<<"auxiliar"<<aux<<" para: "<<a<<endl;
+				proceso[aux][a]=lista[j][i];
+			}
 		}
-			div=10;
 
 	}
-	cout<<"final"<<endl;
 	mostrar(proceso);
-
+	return proceso;
 }
 int main (){
 	vector<int> estatico={64,8,216,512,27,729,0,1,343,125};
-	vector <int> listaN;
-	listaN.push_back(10);
-	//cout<<"Ingresa numeros"<<endl;
-	//listaN=pedir();	
-	cubetasort(estatico);
+	matriz proceso(estatico.size(),vector<int>(estatico.size(),-1));
+	proceso[estatico.size()-1]=estatico;
+	cout<<"original"<<endl;	
+	mostrar(proceso);
+	int veces=4;
+	int div=1;
+	while(veces){
+		cout<<"proceso: "<<veces<<endl;
+		proceso=cubetasort(proceso,div);
+		div*=10;
+		veces--;
+	}
+	
+	//cubetasort(estatico);
+	
 	return 0 ;
 
 }
