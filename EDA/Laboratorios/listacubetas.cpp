@@ -34,12 +34,9 @@ matriz cubetasort(matriz lista,int div){
 			int aux=lista.size()-1;
 			if (lista[j][i]!=-1){
 				a=(lista[j][i]/div)%10;
-				cout<<"valor: "<<lista[j][i]<<endl;
 				while(proceso[aux][a]!=-1){
-					cout<<"auxiliar"<<aux<<" para: "<<a<<endl;
 					aux--;
 				}
-				cout<<"auxiliar"<<aux<<" para: "<<a<<endl;
 				proceso[aux][a]=lista[j][i];
 			}
 		}
@@ -54,7 +51,7 @@ int main (){
 	proceso[estatico.size()-1]=estatico;
 	cout<<"original"<<endl;	
 	mostrar(proceso);
-	int veces=4;
+	int veces=3;
 	int div=1;
 	while(veces){
 		cout<<"proceso: "<<veces<<endl;
@@ -62,9 +59,5 @@ int main (){
 		div*=10;
 		veces--;
 	}
-	
-	//cubetasort(estatico);
-	
 	return 0 ;
-
 }
