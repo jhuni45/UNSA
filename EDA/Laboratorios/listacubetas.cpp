@@ -51,7 +51,7 @@ int main (){
 	proceso[estatico.size()-1]=estatico;
 	cout<<"original"<<endl;	
 	mostrar(proceso);
-	int veces=3;
+	int veces=4;
 	int div=1;
 	while(veces){
 		cout<<"proceso: "<<veces<<endl;
