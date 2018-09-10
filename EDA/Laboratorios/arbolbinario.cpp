@@ -21,22 +21,13 @@ private:
     Node *root;
     int numero;
     int niveles;
-    int level;
     bool bandera_predecesor;
 public:
     Arbol();
     void Add(int);
-    void display();
-    void Help_display_Pos(Node*);
-    void Help_display_Pre(Node*);
-    void Help_display_In(Node*);
     void Help_Add(Node*&,int,int,Node *&);
-    void eliminar(int);
-    void Help_eliminar(Node*&,int);
     void help_Generador();
     void GenerarDot(Node*,ofstream&);
-    Node* predecesor(Node*);
-    Node* sucesor(Node*);
     
 
 };
@@ -63,14 +54,11 @@ void Arbol::GenerarDot(Node* raiz, ofstream &salida){
 	if (raiz==NULL)
 		return;
 	else{
-		//cout<<"hola"<<endl;
 		if (raiz->izq!=NULL){
-			//cout<<"qu onda"<<endl;
 			salida<<raiz->value<<" -> "<<raiz->izq->value<<endl;
 				
 		}
 		if (raiz->der!=NULL){
-			//cout<<"qu onda2222"<<endl;
 			salida<<raiz->value<<" -> "<<raiz->der->value<<endl;
 		}
 		GenerarDot(raiz->izq,salida);
@@ -87,7 +75,6 @@ void Arbol::Help_Add(Node *&raiz, int valor, int nivel,Node*& padre){
         raiz = temp;
         if (niveles<nivel){
         	niveles=nivel;
-        	level=nivel-2;
         }
     }
     else{
@@ -101,53 +88,6 @@ void Arbol::Help_Add(Node *&raiz, int valor, int nivel,Node*& padre){
 
 }
 
-void Arbol::display(){	
-	int op;
-    cout<<"Mostrar en:\n[1] Pre-orden\n[2] Post-orden\n[3] In-orden"<<endl;
-    cin>>op;
-    if (op>3 || op<1)
-    	cout<<"no es una ocion valida"<<endl;
-    else if (op==1)
-    	Help_display_Pre(root);
-    else if (op==2)
-    	Help_display_Pos(root);
-    else if (op==3)
-    	Help_display_In(root);
-
-}
-
-void Arbol::Help_display_Pre(Node *raiz){
-    if(raiz==NULL) {
-        return;
-    }
-    else{
-        cout<<raiz->value<<" ";
-        Help_display_Pre(raiz->izq);
-        Help_display_Pre(raiz->der);
-    }
-}
-void Arbol::Help_display_Pos(Node *raiz){
-    if(raiz==NULL) {
-        return;
-    }
-    else{
-        Help_display_Pos(raiz->izq);
-        Help_display_Pos(raiz->der);
-        cout<<raiz->value<<" ";
-    }
-}
-void Arbol::Help_display_In(Node *raiz){
-    if(raiz==NULL) {
-        return;
-    }
-    else{
-        
-        Help_display_In(raiz->izq);
-        cout<<raiz->value<<" ";
-        Help_display_In(raiz->der);
-        
-    }
-}
 
 int main(){
     srand (time(NULL));
@@ -161,4 +101,4 @@ int main(){
     tree.help_Generador();
 
 	return 0;
-}
+}	
