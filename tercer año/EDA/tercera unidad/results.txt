@@ -1,0 +1,70 @@
+Running 1 point queries 1D items:0.07547ns
+Running 10 point queries 1D items:1.2926ns
+Running 100 point queries 1D items:22.978ns
+Running 1000 point queries 1D items:353.7ns
+Running 10000 point queries 1D items:4331.9ns
+Running 100000 point queries 1D items:54367.2ns
+
+Running 1 point queries 2D items:0.0602ns
+Running 16 point queries 2D items:1.4612ns
+Running 100 point queries 2D items:8.436ns
+Running 1024 point queries 2D items:108.73ns
+Running 10000 point queries 2D items:615.3ns
+Running 100489 point queries 2D items:7468ns
+
+Running 1 point queries 3D items:0.08471ns
+Running 27 point queries 3D items:2.9343ns
+Running 125 point queries 3D items:11.243ns
+Running 1000 point queries 3D items:98.86ns
+Running 10648 point queries 3D items:740.4ns
+Running 103823 point queries 3D items:8707.7ns
+
+Running 1 point queries 4D items:0.07756ns
+Running 16 point queries 4D items:1.4803ns
+Running 256 point queries 4D items:32.161ns
+Running 1296 point queries 4D items:147.12ns
+Running 10000 point queries 4D items:656.4ns
+Running 104976 point queries 4D items:9022.5ns
+
+Running 1 point queries 5D items:0.09243ns
+Running 32 point queries 5D items:4.1193ns
+Running 243 point queries 5D items:31.595ns
+Running 1024 point queries 5D items:113.49ns
+Running 16807 point queries 5D items:1422.5ns
+Running 161051 point queries 5D items:17963.1ns
+
+Running 1 point queries 6D items:0.09933ns
+Running 64 point queries 6D items:6.7066ns
+Running 729 point queries 6D items:78.017ns
+Running 4096 point queries 6D items:430.12ns
+Running 15625 point queries 6D items:1315ns
+Running 117649 point queries 6D items:10891.9ns
+
+
+
+Querying tree with 1 tiles using 1 queries over 1D items:0.05464ns
+Querying tree with 10 tiles using 10 queries over 1D items:1.194ns
+Querying tree with 100 tiles using 100 queries over 1D items:23.274ns
+Querying tree with 1000 tiles using 1000 queries over 1D items:351.93ns
+Querying tree with 10000 tiles using 10000 queries over 1D items:4350.3ns
+Querying tree with 100000 tiles using 100000 queries over 1D items:53469.5ns
+
+Querying tree with 1 tiles using 1 queries over 2D items:0.06479ns
+Querying tree with 16 tiles using 10 queries over 2D items:2.5098ns
+Querying tree with 100 tiles using 100 queries over 2D items:34.861ns
+Querying tree with 1024 tiles using 1000 queries over 2D items:653.87ns
+Querying tree with 10000 tiles using 10000 queries over 2D items:10102.9ns
+Querying tree with 100489 tiles using 100000 queries over 2D items:121427ns
+
+Querying tree with 1 tiles using 1 queries over 3D items:0.08005ns
+Querying tree with 27 tiles using 10 queries over 3D items:8.8552ns
+Querying tree with 125 tiles using 100 queries over 3D items:87.559ns
+Querying tree with 1000 tiles using 1000 queries over 3D items:993.09ns
+Querying tree with 10648 tiles using 10000 queries over 3D items:16512.7ns
+Querying tree with 103823 tiles using 100000 queries over 3D items:244687ns
+
+Querying tree with 1 tiles using 1 queries over 4D items:0.08002ns
+Querying tree with 16 tiles using 10 queries over 4D items:3.9852ns
+Querying tree with 256 tiles using 100 queries over 4D items:229.569ns
+Querying tree with 1296 tiles using 1000 queries over 4D items:1864.29ns
+Querying tree with 10000 tiles using 10000 queries over 4D items:22987.2ns
