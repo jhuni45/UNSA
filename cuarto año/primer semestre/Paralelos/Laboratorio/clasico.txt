@@ -1,0 +1,117 @@
+==4294== Memcheck, a memory error detector
+==4294== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==4294== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==4294== Command: ./clasico
+==4294== Parent PID: 3916
+==4294== 
+--4294-- 
+--4294-- Valgrind options:
+--4294--    --leak-check=full
+--4294--    --show-leak-kinds=all
+--4294--    --track-origins=yes
+--4294--    --verbose
+--4294--    --log-file=clasico.txt
+--4294-- Contents of /proc/version:
+--4294--   Linux version 4.15.0-47-generic (buildd@lgw01-amd64-028) (gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10)) #50~16.04.1-Ubuntu SMP Fri Mar 15 16:06:21 UTC 2019
+--4294-- 
+--4294-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-rdtscp-sse3-avx
+--4294-- Page sizes: currently 4096, max supported 4096
+--4294-- Valgrind library directory: /usr/lib/valgrind
+--4294-- Reading syms from /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/clasico
+--4294-- Reading syms from /lib/x86_64-linux-gnu/ld-2.23.so
+--4294--   Considering /lib/x86_64-linux-gnu/ld-2.23.so ..
+--4294--   .. CRC mismatch (computed aa979a42 wanted 9019bbb7)
+--4294--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.23.so ..
+--4294--   .. CRC is valid
+--4294-- Reading syms from /usr/lib/valgrind/memcheck-amd64-linux
+--4294--   Considering /usr/lib/valgrind/memcheck-amd64-linux ..
+--4294--   .. CRC mismatch (computed eea41ea9 wanted 2009db78)
+--4294--    object doesn't have a symbol table
+--4294--    object doesn't have a dynamic symbol table
+--4294-- Scheduler: using generic scheduler lock implementation.
+--4294-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==4294== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-4294-by-jhunior-on-???
+==4294== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-4294-by-jhunior-on-???
+==4294== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-4294-by-jhunior-on-???
+==4294== 
+==4294== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==4294== don't want to do, unless you know exactly what you're doing,
+==4294== or are doing some strange experiment):
+==4294==   /usr/lib/valgrind/../../bin/vgdb --pid=4294 ...command...
+==4294== 
+==4294== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==4294==   /path/to/gdb ./clasico
+==4294== and then give GDB the following command
+==4294==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=4294
+==4294== --pid is optional if only one valgrind process is running
+==4294== 
+--4294-- REDIR: 0x401cfd0 (ld-linux-x86-64.so.2:strlen) redirected to 0x3809e181 (???)
+--4294-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so
+--4294--   Considering /usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
+--4294--   .. CRC mismatch (computed 2567ccf6 wanted 49420590)
+--4294--    object doesn't have a symbol table
+--4294-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so
+--4294--   Considering /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so ..
+--4294--   .. CRC mismatch (computed 0e27c9a8 wanted ac585421)
+--4294--    object doesn't have a symbol table
+==4294== WARNING: new redirection conflicts with existing -- ignoring it
+--4294--     old: 0x0401cfd0 (strlen              ) R-> (0000.0) 0x3809e181 ???
+--4294--     new: 0x0401cfd0 (strlen              ) R-> (2007.0) 0x04c31020 strlen
+--4294-- REDIR: 0x401b920 (ld-linux-x86-64.so.2:index) redirected to 0x4c30bc0 (index)
+--4294-- REDIR: 0x401bb40 (ld-linux-x86-64.so.2:strcmp) redirected to 0x4c320d0 (strcmp)
+--4294-- REDIR: 0x401dd30 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4c35270 (mempcpy)
+--4294-- Reading syms from /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+--4294--    object doesn't have a symbol table
+--4294-- Reading syms from /lib/x86_64-linux-gnu/libgcc_s.so.1
+--4294--    object doesn't have a symbol table
+--4294-- Reading syms from /lib/x86_64-linux-gnu/libc-2.23.so
+--4294--   Considering /lib/x86_64-linux-gnu/libc-2.23.so ..
+--4294--   .. CRC mismatch (computed 7a8ee3e4 wanted a5190ac4)
+--4294--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.23.so ..
+--4294--   .. CRC is valid
+--4294-- Reading syms from /lib/x86_64-linux-gnu/libm-2.23.so
+--4294--   Considering /lib/x86_64-linux-gnu/libm-2.23.so ..
+--4294--   .. CRC mismatch (computed e8c3647b wanted c3efddac)
+--4294--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libm-2.23.so ..
+--4294--   .. CRC is valid
+--4294-- REDIR: 0x546da00 (libc.so.6:strcasecmp) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--4294-- REDIR: 0x5469280 (libc.so.6:strcspn) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--4294-- REDIR: 0x546fcf0 (libc.so.6:strncasecmp) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--4294-- REDIR: 0x546b6f0 (libc.so.6:strpbrk) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--4294-- REDIR: 0x546ba80 (libc.so.6:strspn) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--4294-- REDIR: 0x546d14b (libc.so.6:memcpy@GLIBC_2.2.5) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--4294-- REDIR: 0x546b400 (libc.so.6:rindex) redirected to 0x4c308a0 (rindex)
+--4294-- REDIR: 0x5462130 (libc.so.6:malloc) redirected to 0x4c2db20 (malloc)
+--4294-- REDIR: 0x5469720 (libc.so.6:strlen) redirected to 0x4c30f60 (strlen)
+--4294-- REDIR: 0x546cbf0 (libc.so.6:__GI_memcmp) redirected to 0x4c33b90 (__GI_memcmp)
+--4294-- REDIR: 0x5467cd0 (libc.so.6:strcmp) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--4294-- REDIR: 0x547d570 (libc.so.6:__strcmp_sse2_unaligned) redirected to 0x4c31f90 (strcmp)
+--4294-- REDIR: 0x4ecd1d0 (libstdc++.so.6:operator new(unsigned long)) redirected to 0x4c2e080 (operator new(unsigned long))
+--4294-- REDIR: 0x553c460 (libc.so.6:__memmove_ssse3_back) redirected to 0x4c32230 (memcpy@GLIBC_2.2.5)
+--4294-- REDIR: 0x4ecb320 (libstdc++.so.6:operator delete(void*)) redirected to 0x4c2f1e0 (operator delete(void*))
+--4294-- REDIR: 0x54624f0 (libc.so.6:free) redirected to 0x4c2ed80 (free)
+==4294== 
+==4294== HEAP SUMMARY:
+==4294==     in use at exit: 72,704 bytes in 1 blocks
+==4294==   total heap usage: 509 allocs, 508 frees, 285,904 bytes allocated
+==4294== 
+==4294== Searching for pointers to 1 not-freed blocks
+==4294== Checked 107,192 bytes
+==4294== 
+==4294== 72,704 bytes in 1 blocks are still reachable in loss record 1 of 1
+==4294==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4294==    by 0x4EC93B5: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==4294==    by 0x40106B9: call_init.part.0 (dl-init.c:72)
+==4294==    by 0x40107CA: call_init (dl-init.c:30)
+==4294==    by 0x40107CA: _dl_init (dl-init.c:120)
+==4294==    by 0x4000C69: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+==4294== 
+==4294== LEAK SUMMARY:
+==4294==    definitely lost: 0 bytes in 0 blocks
+==4294==    indirectly lost: 0 bytes in 0 blocks
+==4294==      possibly lost: 0 bytes in 0 blocks
+==4294==    still reachable: 72,704 bytes in 1 blocks
+==4294==         suppressed: 0 bytes in 0 blocks
+==4294== 
+==4294== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==4294== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

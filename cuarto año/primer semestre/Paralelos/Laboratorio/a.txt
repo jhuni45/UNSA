@@ -1,0 +1,200 @@
+==9434== Memcheck, a memory error detector
+==9434== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==9434== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==9434== Command: ./bloque
+==9434== Parent PID: 2922
+==9434== 
+--9434-- 
+--9434-- Valgrind options:
+--9434--    --leak-check=full
+--9434--    --show-leak-kinds=all
+--9434--    --track-origins=yes
+--9434--    --verbose
+--9434--    --log-file=a.txt
+--9434-- Contents of /proc/version:
+--9434--   Linux version 4.15.0-47-generic (buildd@lgw01-amd64-028) (gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10)) #50~16.04.1-Ubuntu SMP Fri Mar 15 16:06:21 UTC 2019
+--9434-- 
+--9434-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-rdtscp-sse3-avx
+--9434-- Page sizes: currently 4096, max supported 4096
+--9434-- Valgrind library directory: /usr/lib/valgrind
+--9434-- Reading syms from /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque
+--9434-- Reading syms from /lib/x86_64-linux-gnu/ld-2.23.so
+--9434--   Considering /lib/x86_64-linux-gnu/ld-2.23.so ..
+--9434--   .. CRC mismatch (computed aa979a42 wanted 9019bbb7)
+--9434--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.23.so ..
+--9434--   .. CRC is valid
+--9434-- Reading syms from /usr/lib/valgrind/memcheck-amd64-linux
+--9434--   Considering /usr/lib/valgrind/memcheck-amd64-linux ..
+--9434--   .. CRC mismatch (computed eea41ea9 wanted 2009db78)
+--9434--    object doesn't have a symbol table
+--9434--    object doesn't have a dynamic symbol table
+--9434-- Scheduler: using generic scheduler lock implementation.
+--9434-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==9434== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-9434-by-jhunior-on-???
+==9434== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-9434-by-jhunior-on-???
+==9434== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-9434-by-jhunior-on-???
+==9434== 
+==9434== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==9434== don't want to do, unless you know exactly what you're doing,
+==9434== or are doing some strange experiment):
+==9434==   /usr/lib/valgrind/../../bin/vgdb --pid=9434 ...command...
+==9434== 
+==9434== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==9434==   /path/to/gdb ./bloque
+==9434== and then give GDB the following command
+==9434==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=9434
+==9434== --pid is optional if only one valgrind process is running
+==9434== 
+--9434-- REDIR: 0x401cfd0 (ld-linux-x86-64.so.2:strlen) redirected to 0x3809e181 (???)
+--9434-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so
+--9434--   Considering /usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
+--9434--   .. CRC mismatch (computed 2567ccf6 wanted 49420590)
+--9434--    object doesn't have a symbol table
+--9434-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so
+--9434--   Considering /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so ..
+--9434--   .. CRC mismatch (computed 0e27c9a8 wanted ac585421)
+--9434--    object doesn't have a symbol table
+==9434== WARNING: new redirection conflicts with existing -- ignoring it
+--9434--     old: 0x0401cfd0 (strlen              ) R-> (0000.0) 0x3809e181 ???
+--9434--     new: 0x0401cfd0 (strlen              ) R-> (2007.0) 0x04c31020 strlen
+--9434-- REDIR: 0x401b920 (ld-linux-x86-64.so.2:index) redirected to 0x4c30bc0 (index)
+--9434-- REDIR: 0x401bb40 (ld-linux-x86-64.so.2:strcmp) redirected to 0x4c320d0 (strcmp)
+--9434-- REDIR: 0x401dd30 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4c35270 (mempcpy)
+--9434-- Reading syms from /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+--9434--    object doesn't have a symbol table
+--9434-- Reading syms from /lib/x86_64-linux-gnu/libm-2.23.so
+--9434--   Considering /lib/x86_64-linux-gnu/libm-2.23.so ..
+--9434--   .. CRC mismatch (computed e8c3647b wanted c3efddac)
+--9434--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libm-2.23.so ..
+--9434--   .. CRC is valid
+--9434-- Reading syms from /lib/x86_64-linux-gnu/libgcc_s.so.1
+--9434--    object doesn't have a symbol table
+--9434-- Reading syms from /lib/x86_64-linux-gnu/libc-2.23.so
+--9434--   Considering /lib/x86_64-linux-gnu/libc-2.23.so ..
+--9434--   .. CRC mismatch (computed 7a8ee3e4 wanted a5190ac4)
+--9434--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.23.so ..
+--9434--   .. CRC is valid
+--9434-- REDIR: 0x5776a00 (libc.so.6:strcasecmp) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--9434-- REDIR: 0x5772280 (libc.so.6:strcspn) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--9434-- REDIR: 0x5778cf0 (libc.so.6:strncasecmp) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--9434-- REDIR: 0x57746f0 (libc.so.6:strpbrk) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--9434-- REDIR: 0x5774a80 (libc.so.6:strspn) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--9434-- REDIR: 0x577614b (libc.so.6:memcpy@GLIBC_2.2.5) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--9434-- REDIR: 0x5774400 (libc.so.6:rindex) redirected to 0x4c308a0 (rindex)
+--9434-- REDIR: 0x576b130 (libc.so.6:malloc) redirected to 0x4c2db20 (malloc)
+--9434-- REDIR: 0x5772720 (libc.so.6:strlen) redirected to 0x4c30f60 (strlen)
+--9434-- REDIR: 0x5775bf0 (libc.so.6:__GI_memcmp) redirected to 0x4c33b90 (__GI_memcmp)
+--9434-- REDIR: 0x5770cd0 (libc.so.6:strcmp) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--9434-- REDIR: 0x5786570 (libc.so.6:__strcmp_sse2_unaligned) redirected to 0x4c31f90 (strcmp)
+--9434-- REDIR: 0x4ecd1d0 (libstdc++.so.6:operator new(unsigned long)) redirected to 0x4c2e080 (operator new(unsigned long))
+--9434-- REDIR: 0x5845460 (libc.so.6:__memmove_ssse3_back) redirected to 0x4c32230 (memcpy@GLIBC_2.2.5)
+--9434-- REDIR: 0x4ecb320 (libstdc++.so.6:operator delete(void*)) redirected to 0x4c2f1e0 (operator delete(void*))
+==9434== 
+==9434== Process terminating with default action of signal 2 (SIGINT)
+==9434==    at 0x400CBB: sixfor(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x401035: main (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+--9434-- REDIR: 0x576b4f0 (libc.so.6:free) redirected to 0x4c2ed80 (free)
+==9434== 
+==9434== HEAP SUMMARY:
+==9434==     in use at exit: 284,704 bytes in 506 blocks
+==9434==   total heap usage: 509 allocs, 3 frees, 285,904 bytes allocated
+==9434== 
+==9434== Searching for pointers to 506 not-freed blocks
+==9434== Checked 319,456 bytes
+==9434== 
+==9434== 2,400 bytes in 1 blocks are still reachable in loss record 1 of 8
+==9434==    at 0x4C2E0EF: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9434==    by 0x40261A: __gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >::allocate(unsigned long, void const*) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x402391: std::allocator_traits<std::allocator<std::vector<int, std::allocator<int> > > >::allocate(std::allocator<std::vector<int, std::allocator<int> > >&, unsigned long) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x4020B9: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_allocate(unsigned long) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x401D16: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_create_storage(unsigned long) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x401850: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_Vector_base(unsigned long, std::allocator<std::vector<int, std::allocator<int> > > const&) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x40140B: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > > const&) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x400F33: main (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434== 
+==9434== 2,400 bytes in 1 blocks are still reachable in loss record 2 of 8
+==9434==    at 0x4C2E0EF: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9434==    by 0x40261A: __gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >::allocate(unsigned long, void const*) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x402391: std::allocator_traits<std::allocator<std::vector<int, std::allocator<int> > > >::allocate(std::allocator<std::vector<int, std::allocator<int> > >&, unsigned long) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x4020B9: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_allocate(unsigned long) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x401D16: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_create_storage(unsigned long) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x401850: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_Vector_base(unsigned long, std::allocator<std::vector<int, std::allocator<int> > > const&) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x40140B: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > > const&) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x400FBC: main (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434== 
+==9434== 2,400 bytes in 1 blocks are still reachable in loss record 3 of 8
+==9434==    at 0x4C2E0EF: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9434==    by 0x40261A: __gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >::allocate(unsigned long, void const*) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x402391: std::allocator_traits<std::allocator<std::vector<int, std::allocator<int> > > >::allocate(std::allocator<std::vector<int, std::allocator<int> > >&, unsigned long) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x4020B9: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_allocate(unsigned long) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x401D16: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_create_storage(unsigned long) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x401850: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_Vector_base(unsigned long, std::allocator<std::vector<int, std::allocator<int> > > const&) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x401565: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x401008: main (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434== 
+==9434== 2,400 bytes in 1 blocks are still reachable in loss record 4 of 8
+==9434==    at 0x4C2E0EF: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9434==    by 0x40261A: __gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >::allocate(unsigned long, void const*) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x402391: std::allocator_traits<std::allocator<std::vector<int, std::allocator<int> > > >::allocate(std::allocator<std::vector<int, std::allocator<int> > >&, unsigned long) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x4020B9: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_allocate(unsigned long) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x401D16: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_create_storage(unsigned long) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x401850: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_Vector_base(unsigned long, std::allocator<std::vector<int, std::allocator<int> > > const&) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x401565: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x40101E: main (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434== 
+==9434== 2,400 bytes in 1 blocks are still reachable in loss record 5 of 8
+==9434==    at 0x4C2E0EF: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9434==    by 0x40261A: __gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >::allocate(unsigned long, void const*) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x402391: std::allocator_traits<std::allocator<std::vector<int, std::allocator<int> > > >::allocate(std::allocator<std::vector<int, std::allocator<int> > >&, unsigned long) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x4020B9: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_allocate(unsigned long) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x401D16: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_create_storage(unsigned long) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x401850: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_Vector_base(unsigned long, std::allocator<std::vector<int, std::allocator<int> > > const&) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x40140B: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > > const&) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x400B4D: sixfor(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x401035: main (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434== 
+==9434== 72,704 bytes in 1 blocks are still reachable in loss record 6 of 8
+==9434==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9434==    by 0x4EC93B5: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==9434==    by 0x40106B9: call_init.part.0 (dl-init.c:72)
+==9434==    by 0x40107CA: call_init (dl-init.c:30)
+==9434==    by 0x40107CA: _dl_init (dl-init.c:120)
+==9434==    by 0x4000C69: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+==9434== 
+==9434== 80,000 bytes in 200 blocks are still reachable in loss record 7 of 8
+==9434==    at 0x4C2E0EF: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9434==    by 0x402597: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x402316: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x402017: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x401BE6: std::_Vector_base<int, std::allocator<int> >::_M_create_storage(unsigned long) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x4016EE: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x40268F: std::vector<int, std::allocator<int> >::vector(std::vector<int, std::allocator<int> > const&) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x402530: void std::_Construct<std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> > const&>(std::vector<int, std::allocator<int> >*, std::vector<int, std::allocator<int> > const&) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x402246: std::vector<int, std::allocator<int> >* std::__uninitialized_copy<false>::__uninit_copy<__gnu_cxx::__normal_iterator<std::vector<int, std::allocator<int> > const*, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > >, std::vector<int, std::allocator<int> >*>(__gnu_cxx::__normal_iterator<std::vector<int, std::allocator<int> > const*, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > >, __gnu_cxx::__normal_iterator<std::vector<int, std::allocator<int> > const*, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > >, std::vector<int, std::allocator<int> >*) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x401F19: std::vector<int, std::allocator<int> >* std::uninitialized_copy<__gnu_cxx::__normal_iterator<std::vector<int, std::allocator<int> > const*, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > >, std::vector<int, std::allocator<int> >*>(__gnu_cxx::__normal_iterator<std::vector<int, std::allocator<int> > const*, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > >, __gnu_cxx::__normal_iterator<std::vector<int, std::allocator<int> > const*, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > >, std::vector<int, std::allocator<int> >*) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x401AB0: std::vector<int, std::allocator<int> >* std::__uninitialized_copy_a<__gnu_cxx::__normal_iterator<std::vector<int, std::allocator<int> > const*, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > >, std::vector<int, std::allocator<int> >*, std::vector<int, std::allocator<int> > >(__gnu_cxx::__normal_iterator<std::vector<int, std::allocator<int> > const*, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > >, __gnu_cxx::__normal_iterator<std::vector<int, std::allocator<int> > const*, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > >, std::vector<int, std::allocator<int> >*, std::allocator<std::vector<int, std::allocator<int> > >&) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x4015B3: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434== 
+==9434== 120,000 bytes in 300 blocks are still reachable in loss record 8 of 8
+==9434==    at 0x4C2E0EF: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9434==    by 0x402597: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x402316: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x402017: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x401BE6: std::_Vector_base<int, std::allocator<int> >::_M_create_storage(unsigned long) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x4016EE: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x40268F: std::vector<int, std::allocator<int> >::vector(std::vector<int, std::allocator<int> > const&) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x402530: void std::_Construct<std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> > const&>(std::vector<int, std::allocator<int> >*, std::vector<int, std::allocator<int> > const&) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x4023F8: std::vector<int, std::allocator<int> >* std::__uninitialized_fill_n<false>::__uninit_fill_n<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x40211F: std::vector<int, std::allocator<int> >* std::uninitialized_fill_n<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x401DBB: std::vector<int, std::allocator<int> >* std::__uninitialized_fill_n_a<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > >&) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434==    by 0x40190F: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_fill_initialize(unsigned long, std::vector<int, std::allocator<int> > const&) (in /home/jhunior/Documentos/UNSA/cuarto año/primer semestre/Paralelos/Laboratorio/bloque)
+==9434== 
+==9434== LEAK SUMMARY:
+==9434==    definitely lost: 0 bytes in 0 blocks
+==9434==    indirectly lost: 0 bytes in 0 blocks
+==9434==      possibly lost: 0 bytes in 0 blocks
+==9434==    still reachable: 284,704 bytes in 506 blocks
+==9434==         suppressed: 0 bytes in 0 blocks
+==9434== 
+==9434== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==9434== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
