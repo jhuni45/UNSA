@@ -1,0 +1,32 @@
+****
+variables inmutables 
+
+const var;
+***
+
+mutable 
+
+
+
+let obj.Object.freeze({foo:'bar'})
+obj.foo='other';  si
+obj={msg.'hola'};  no
+
+
+const obj=Object.freeze({foo:'bar'})
+
+*********
+const a=Object.freeze([4,5,6]);
+const b=a.concat(7,8,9);
+const l=a.slice(0,-1);
+
+
+inmutable implementado
+****
+const lis1=Inmutable.List([1,2,3]);
+const lis2=list1.push(4,5)
+
+<inmutable.min.js>
+
+
+

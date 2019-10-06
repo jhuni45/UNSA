@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		const reducer=(accumulator, currentValue)=>accumulator+currentValue;
+		const celsius=[-15,-5,0,10,16,20,24,32];
+		const users=[
+				{id :11, name:'Adam',age:23, group:'editor'},
+				{id :47, name:'John',age:28, group:'admin'},
+				{id :85, name:'William',age:34, group:'editor'},
+				{id :97, name:'Oliver',age:28, group:'admin'},
+				];
+		arr=[
+			{name:'luna',sex:'f',age:7,species:'dog'},
+			{name:'jimmy',sex:'m',age:122,species:'human'},
+			{name:'snoop',sex:'m',age:60,species:'human'},
+			{name:'jennifer',sex:'f',age:250,species:'human'},
+			{name:'yeller',sex:'20',age:20,species:'dog'},
+		];
+		
+		console.log("pregunta 1");
+		const primera=celsius.map(x=>x*(9/5)+32);
+		console.log(primera);
+		console.log("pregunta 2");
+		const segunda=users.filter(x=>x.name.indexOf("l")!=-1);
+		console.log(segunda);
+		console.log("pregunta 3");
+		const tercera=users.map(x=>x.group=='admin'?'true':'false');
+		console.log(tercera);
+		console.log("pregunta 4");
+
+		function func(users,result){
+		if (users.length== 0){
+			return {};
+		}
+		temp_user=users[0];
+		if (temp_user.group in result) {
+			result[temp_user.group]=1;
+		}
+		result[temp_user.group]+=1;
+		func(users.slice(1),result);
+		}
+
+		aux1={}
+		func(users,aux1);
+		console.log(aux1);
+
+		console.log("pregunta 5");
+		const aux2=arr.filter(x=>x.species=='dog').map(x=>x.age);
+		const quinta=aux2.reduce(reducer)/aux2.length;
+		console.log(quinta);
+		
+	</script>
+
+</body>
+</html>

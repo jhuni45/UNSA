@@ -107,9 +107,3 @@ print calculator(theta,5)
 #plt.show()
 
 #regression(pointsX,pointsY,Decimal(0.00001))
-
-
-
-
-
-

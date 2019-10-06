@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+</head>
+<body>
+	<div id='my_div'></div>
+	<script type="text/javascript">
+
+		function show(person){
+			var node=document.createElement("li");
+
+			var textnode=document.createTextNode(person);
+			node.appendChild(textnode);
+			document.getElementById('my_div').appendChild(node);
+		}
+
+		function square(x) {return x*x;}
+		function double(x) {return x*2;}
+		
+		/*****Poblema1***/
+		
+		function composedValue(x) {
+			return square(double(x));
+		}
+
+		//const y=composedValue(10);
+		//console.log(y);
+		show('Problema 1');
+		show(composedValue(10));
+
+		/***Problema2***/
+		show('Problema 2');
+		const compose=(f1, f2)=>{
+			return (m)=> f1(f2(m)) 
+		}
+
+		const f3=compose(square,double);
+		show(f3(5));
+		show(f3(10));
+		//const a=f3(5);
+		//const b=f3(10);
+		//console.log(a);
+		//console.log(b);
+
+		const f4=compose(double,square);
+		//const c=f4(5);
+		//const d=f4(10);
+		//console.log(c);
+		//console.log(d);
+		show(f4(5));
+		show(f4(10));	
+
+		/****Problema3****/
+		show('Problema 3');
+		function isEven(num) { return(num%2 == 0); }
+
+		function find(array, func){
+			for (var i = 0; i < array.length; i++) {
+				if (func(array[i])) {
+					return array[i];
+				}
+			}
+		}
+
+		//const a=isEven(3);
+		//console.log(a);
+		//const b=isEven(4);
+		//console.log(b);
+		
+		//const c= find([1, 3, 5, 4, 2], isEven);
+		//console.log(c);
+		show(find([1, 3, 5, 4, 2], isEven));
+
+		/***Problema4****/
+		function mymap(array,func) {
+			for (var i = 0; i < array.length; i++) {
+				array[i]=func(array[i]);
+			}
+			return array;
+		}
+		//var a=mymap([1, 2, 3, 4, 5], square);
+		//var b=mymap([1, 4, 9, 16, 25], Math.sqrt);
+
+		//console.log();
+		//console.log(b);
+		show(mymap([1, 2, 3, 4, 5], square));
+		show(mymap([1, 4, 9, 16, 25], Math.sqrt));
+
+		/***Problema5***/
+		show('Problema5');
+
+		function find2(array, func){
+			if (func(array[0])) {
+				console.log(array);
+				return array[0];
+			}
+			else{
+				return find2(array.slice(1,array.lenght),func);
+			}
+		}
+
+		show(find2([1, 3, 5, 4, 2], isEven));
+
+		/**Problema6**/
+		//const x;
+		show('Problema6');
+
+		function myMapRec(arr,func){
+ 	   if (arr.length <= 0) return
+    	return [func(arr[0])].concat( myMapRec(arr.slice(1,arr.length),func) )
+	}
+		function mymap2(array,func) {
+			if (array.lenght<=0) return
+			
+			return [func(array[0])].concat(mymap2(array.slice(1,array.length),func))
+		}
+		show(myMapRec([1, 2, 3, 4, 5], square));
+//		show(mymap2([1, 4, 9, 16, 25], Math.sqrt));
+		/****java 2 ... sumar mas 2****/
+		
+
+	</script>
+</body>
+</html>

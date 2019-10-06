@@ -1,5 +1,4 @@
 from random import randint
-import pandas as pd
 from math import *
 from decimal import *
 import matplotlib.pyplot as plt
@@ -38,7 +37,7 @@ def graficar(theta1,theta2, X, Y, num):
 	fig.savefig(file, dpi=fig.dpi)
 
 def regression(X,Y,umbral):
-	theta1=1
+	theta1=2
 	theta2=1
 	error=calcularError(theta1,theta2,X,Y)
 	num=0
@@ -46,9 +45,12 @@ def regression(X,Y,umbral):
 	num+=1
 	while Decimal(error)>Decimal(umbral):
 		theta1=theta1-(Decimal(0.1)* derivada(theta1,theta2,X,Y,0))
+		print ("t1",theta1)
 		theta2=theta2-(Decimal(0.1)* derivada(theta1,theta2,X,Y,1))
+		print("t2",theta2)
 		error=calcularError(theta1,theta2,X,Y)
-		graficar(theta1,theta2,X,Y,num)	
+		print("error", error)
+		#graficar(theta1,theta2,X,Y,num)	
 		num+=1
 pointsX=[]
 pointsY=[]
@@ -64,8 +66,8 @@ while aux < 6:
 	aux+=1
 print pointsY
 print pointsX
-df=pd.read_csv("forestfires.csv")
+#df=pd.read_csv("forestfires.csv")
 
-X_train, X_test, y_train, y_test=train_test_split(pointsX,pointsY,test_size=0.3, random_state=10)
+#X_train, X_test, y_train, y_test=train_test_split(pointsX,pointsY,test_size=0.3, random_state=10)
 
-#regression(pointsX,pointsY,Decimal(0.00001))
+regression(pointsX,pointsY,Decimal(0.00001))

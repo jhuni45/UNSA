@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+	//Objetos
+
+	var person = {firstname:"John", lastname:"Doe", age:50};
+	
+	//**************
+	
+	var personVar=new Object();
+	personVar.firstname="John 2";
+	personVar.lastname="Doe";
+	personVar.age=50;
+	
+
+	//**************
+	
+	function Person (first,last,age){
+		this.firstname=first;
+		this.lastname=last;
+		this.age=age;
+		this.name=function(){return this.firstname+" "+this.lastname+" ";};
+	}
+	var Person1= new Person("x","j",30);
+	var Person2= new Person("a","b",20);
+	
+
+	//Funciones
+	//************version1
+	/*
+	Function f1(){
+		var carName='Volvo';
+	}
+	*/
+
+	//************version2
+	/*
+	var carName='Volvo';
+	//si
+	Function f1(){
+		//Se puede usar aqui
+	}
+	//aqui tambien
+
+	//la variable carName es global
+	*/
+
+	//*******version3
+	/*
+	myFunction();
+	//si
+	Function myFunction(){
+		carName='Volvo';
+		//si	
+	}
+	//si
+	*/
+	//***********version4
+	//bucles for
+	/*
+	Function f1(){
+		//no
+		for (let x=0;x<5;x++){
+			//si
+		}
+		//no
+	}
+	*/
+	//***********version5
+	/*
+	Function f2(){
+		//si
+		for (var x=0;x<5;x++){
+			//si
+		}
+		//si
+	}
+	*/
+
+	var txt="holi";
+	console.log(txt);
+
+	 
+
+</script>
+</head>
+
+<body>
+	<div id='my_div'></div>
+	
+	<script type="text/javascript">
+	
+		function show(person){
+			var node=document.createElement("li");
+
+			var textnode=document.createTextNode(person.firstname);
+			node.appendChild(textnode);
+			document.getElementById('my_div').appendChild(node);
+		}
+		show(person);
+		show(personVar);
+		show(Person1);
+		show(Person2);
+	</script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		/*
+
+		const memopow2 = function () {
+			let memo1={};
+			console.log(memo1);
+			return function fib(n) {
+				if (x in memo1){return memo1[n]}
+				else{
+					console.log("asdasd");
+					if (n<=1){
+						memo1[n]=x;
+						console.log(memo1[n]);
+					}
+					else{
+						memo1[n]=fib(n-1)+fib(n-2);
+					}
+					console.log(memo1);
+					return memo1[n];
+				}
+				console.log(memo1);
+			}
+			
+		}*/
+		function factorial(numero){
+                if(numero==1){
+                    return numero;
+                }
+                return numero*factorial(numero-1);
+            }
+//        var numero =5;
+  //      console.log(factorial(numero));
+
+        //La 1 memoization
+        const memofacto = function(){
+            let memo = {};
+            return function facto(n){
+                if (n in memo){return memo[n];}
+                else{
+                    if(n==0){
+                        memo[n]=1;
+                    }
+                    else{
+                        memo[n]= n * facto(n-1);
+                    }
+                    return memo[n];
+                }
+            }
+        }
+        console.log("adinasmkdasd");
+        const facto = memofacto();
+        console.log(facto(0));
+
+		console.log("ejercicio 2");
+		const x = 5;
+		const n = 1;
+		function recurpow(x,n) {
+			//if (n==1){return x;}
+			if (n==0){return 1;}
+			else{
+				return x*recurpow(x,n-1);
+			}
+		}
+		console.log(recurpow(x,n));
+
+		const memopow = function () {
+			let memo={};
+			return function memopowf(x,n) {
+				if ([x,n] in memo){return memo[[x,n]];}
+				else{
+					/*if (n==1){
+						memo[n]=x;
+						console.log(memo[n]);
+					}*/
+					if (n==0){
+						memo[[x,n]]=1;
+					}
+					else{
+						memo[[x,n]]=x*memopowf(x,n-1);
+					}
+					return memo[[x,n]];
+				}
+			}	
+		}
+
+		console.log(memopow()(2,0));
+		//memopow(2,1);
+		
+		console.log("ejercicio 4");
+		function serie(x,signo,iter,n){
+			if(iter==0)
+			    return 0;
+			iter--;
+			var result =  memopow()(x,n)/facto(n);
+			n=n+2;
+			return signo*result+serie(x,signo*-1,iter,n);
+		}
+
+		function seno(x,iter){
+    		return serie(x,1,iter,1);
+		}
+		function coseno(x,iter) {
+			return serie(x,1,iter,0);
+		}
+		console.log(seno(2,10));
+		console.log(coseno(2,10));
+
+		const memosin = function () {
+			let memo={};
+			return function memoseno(x,signo,iter,n) {
+				if (iter in memo){return memo[iter];}
+				else{
+					
+					if (iter==0){
+						memo[n]=0;
+					}
+					else{
+						iter--;
+						var result =memopow()(x,n)/facto(n);
+						n=n+2
+					}
+					return memo[iter]=signo*result+memoseno(x,signo*-1,iter,n);
+				}
+			}	
+		}
+
+		const memocos = function () {
+			let memo={};
+			return function memocoseno(x,signo,iter,n) {
+				if (iter in memo){return memo[iter];}
+				else{
+					
+					if (iter==0){
+						memo[n]=0;
+					}
+					else{
+						iter--;
+						var result =memopow()(x,n)/facto(n);
+						n=n+2
+					}
+					return memo[iter]=signo*result+memocoseno(x,signo*-1,iter,n);
+				}
+			}	
+		}
+		//console.log(memosin()(2,1,10,1));
+		//console.log(memocoseno()(2,1,10,0));
+
+
+		console.log("ejercicio 5");
+		const memoFun = function(func){
+		    let memo = {};
+		    return (...args)=>{
+		        const n=JSON.stringify(args);
+		        if (n in memo)
+		        	return memo[n]
+		        else
+		        	return memo[n]=func(...args);
+		    }
+		}
+		powrecurfun = memoFun(recurpow);
+
+		console.log(powrecurfun(3,2));
+
+
+	</script>
+
+</body>
+</html>
