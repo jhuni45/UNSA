@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		const reducer=(accumulator, currentValue)=>accumulator+currentValue;
+		let data=[-15,-5,0,10,15];
+		//console.log(data);
+		const result=data.map(x=>x*x+8*x+5);
+		//console.log(result); 
+
+		const users=[
+				{name:'Adam',age:23, group:'editor'},
+				{name:'John',age:28, group:'admin'},
+				{name:'William',age:34, group:'editor'},
+				{name:'Oliver',age:28, group:'admin'},
+				];
+		//console.log(users);
+		const result2=(users.filter(x=>x.age>30)).map(x=>console.log(x.name));
+		//console.log(result2);
+
+		//console.log('pregunta 3');
+		const aux=(users.filter(x=>x.group=='admin')).map(x=>x.age)
+		const result3=aux.reduce(reducer)/aux.length;
+		//console.log(result3);
+
+		function rec1(value) {
+			return value*value-(value-1);
+		}
+		function rec2(value){
+			return value*value;
+		}
+		function rec3(value){
+			return value*value-(value+((value-2)));
+		}
+		function rec4(value) {
+			return rec2(value-2)+((value-2)-1); 
+		}
+
+		function suma(value) {
+			return rec2(value)+rec4(value);
+		}
+
+		const result4=suma(3);
+		console.log(result4);
+
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id='my_div'></div>
+	<script type="text/javascript">
+		function show(person){
+			var node=document.createElement("li");
+
+			var textnode=document.createTextNode(person);
+			node.appendChild(textnode);
+			document.getElementById('my_div').appendChild(node);
+		}
+		var numbers=[1,2,3,4];
+
+		function suma(x){return x+x;}
+
+		function serapar(x) {
+			if (x%2==0)
+				return 'par';
+			return 'impar';
+		}
+		function sumita(array,func) {
+			for (var i = 0; i < array.length; i++) {
+				array[i]=func(array[i]);
+			}
+			return array;
+		}
+		show(sumita([1,2,3,4],suma));
+		show(numbers.map(x=>x*2));
+		/****funciones*****/
+
+		show(numbers.map(serapar));
+		/*crear nuevos metodos*/
+		Array.prototype.myUcase=function(){
+			for (i = 0; i<this.length ; i++) {
+				this[i]=this[i].toUpperCase();
+			}
+		};
+		var fruits =["Banana","Orange"];
+		fruits.myUcase()
+		show(fruits);
+
+		function cubo(x) {
+			return x*10;
+		}
+		Array.prototype.mymap=function(f1){
+			for (i = 0; i < this.length; i++) {
+				this[i]=f1(this[i])
+			}
+			return this;
+		};
+		
+		show([10,20,30,40].mymap(suma));
+	</script>
+
+
+
+</body>
+</html>

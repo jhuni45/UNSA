@@ -1,0 +1,4 @@
+-------------------------
+Test - neurons: 6 alfa: 0.07
+success:	 45
+failed: 	 0

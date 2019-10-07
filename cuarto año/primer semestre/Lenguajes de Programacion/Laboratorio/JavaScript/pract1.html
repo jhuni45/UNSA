@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id='my_div'></div>
+		<script type="text/javascript">
+		function show(person){
+			var node=document.createElement("li");
+			var textnode=document.createTextNode(person);
+			node.appendChild(textnode);
+			document.getElementById('my_div').appendChild(node);
+		}
+
+		show("practica");
+		let tasks=[
+		{
+			'name':'Buy milk from the shop',
+			'duration':20,
+			'priority':1
+		},	
+		{
+			'name':'Clean the house',
+			'duration':120,
+			'priority':3
+		},
+		{
+			'name':'Study JS functions',
+			'duration':180,
+			'priority':1
+		},
+		];
+		tasks1=tasks.slice(1,3);
+		console.log(tasks1);
+		show('***********************************');
+		show('*******problema1********');
+		function mymap(array){
+
+			for (i = 0; i < array.length; i++) {
+				//console.log(this[i].length);
+				show(array[i].name);
+			}
+		};
+		show('****funcional');
+		mymap(tasks);
+		show('****imperativo');
+		const map1=tasks.map(x=>x.name);
+		show (map1);
+
+		/****problema2*/
+		show('***********************************');
+		show('*******problema2********');
+
+		function filtrar(array) {
+			for (var i = 0; i < array.length; i++) {
+				if (array[i].priority==1)
+					show(array[i].name);
+			}
+		}
+		show('****funcional');
+		filtrar(tasks);
+		const p2=tasks.filter(x=>x.priority==1);
+		const aux0=p2.map(x=>x.name);	
+		show('****imperativo');
+		show(aux0);
+		/******problema3****/
+		show('***********************************');
+		show('*******problema3*******');
+
+		function duraciones(array) {
+			show('****funcional');
+			var a=0;
+			for (var i = 0; i < array.length; i++) {
+				a+=array[i].duration;
+			}
+			show('SUMA: ');
+			show(a);
+		}
+		duraciones(tasks);
+		const p3 =tasks.map(x=>x.duration);
+		const reducer=(accumulator, currentValue)=>accumulator+currentValue;
+		show('*****imperativo');
+		show(p3.reduce(reducer));
+		/****problema4***/
+		show('***********************************');
+		show('*********problema4******');
+		const vehicles = [
+		    { make: 'Honda', model: 'CR-V', type: 'suv', price: 24045 },
+		    { make: 'Honda', model: 'Accord', type: 'sedan', price: 22455 },
+		    { make: 'Mazda', model: 'Mazda 6', type: 'sedan', price: 24195 },
+		    { make: 'Mazda', model: 'CX-9', type: 'suv', price: 31520 },
+		    { make: 'Toyota', model: '4Runner', type: 'suv', price: 34210 },
+		    { make: 'Toyota', model: 'Sequoia', type: 'suv', price: 45560 },
+		    { make: 'Toyota', model: 'Tacoma', type: 'truck', price: 24320 },
+		    { make: 'Ford', model: 'F-150', type: 'truck', price: 27110 },
+		    { make: 'Ford', model: 'Fusion', type: 'sedan', price: 22120 },
+		    { make: 'Ford', model: 'Explorer', type: 'suv', price: 31660 }
+		];
+		function precios(array) {
+			var acum=0;
+			var cont=0;
+			show('*****funcional');
+			for (var i = 0; i < array.length; i++) {
+				if (array[i].type=='suv'){
+					cont+=1;
+					acum+=array[i].price;
+				}
+			}
+			
+			acum=acum/cont;
+			show(acum);
+		}
+		precios(vehicles);
+		const aux1=vehicles.filter(x=>x.type=='suv');
+		const aux2=aux1.map(x=>x.price);
+		const mean=aux2.reduce(reducer);
+		var meanprice=mean/aux1.length;
+		show('****imperativo');
+		show(meanprice);
+
+		/*****problema5***/
+		show('***********************************');
+		show('******problema5*******')
+		var personnel=[
+		{
+			id:5,
+			name:"Luke Skywalker",
+			pilotingScore:98,
+			shootingScore:56,
+			isForceUser:true,
+			},
+			{
+			id:8,
+			name:"Sabine Wren",
+			pilotingScore:73,
+			shootingScore:98,
+			isForceUser:false,
+			},
+			{
+			id:2,
+			name:"Zeb Orellios",
+			pilotingScore:20,
+			shootingScore:50,
+			isForceUser:false,
+			},
+			{
+			id:15,
+			name:"Ezra Bridger",
+			pilotingScore:43,
+			shootingScore:67,
+			isForceUser:true,
+			},
+			{
+			id:11,
+			name:"Caleb Dume",
+			pilotingScore:71,
+			shootingScore:85,
+			isForceUser:true,
+			},
+		];
+		function fuerza(array) {
+			show('****funcional');
+			var a=0;
+			for (var i = 0; i < array.length; i++) {
+				if (array[i].isForceUser==true){
+					a+=array[i].shootingScore+array[i].pilotingScore;
+				}
+			}
+			show(a);
+		}
+		fuerza(personnel);
+		const aux3=personnel.filter(x=>x.isForceUser ==true);
+		const aux4=aux3.map(x=>x.shootingScore);
+		const aux5=aux3.map(x=>x.pilotingScore);
+		const procesar=aux4.concat(aux5);
+		show('****imperativo');
+		show(procesar.reduce(reducer));
+
+	</script>
+
+</body>
+</html>

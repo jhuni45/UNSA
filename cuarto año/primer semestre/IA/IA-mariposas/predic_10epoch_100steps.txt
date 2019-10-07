@@ -1,0 +1,60 @@
+================================	BIEN
+|	image	: 000.png	|
+|	especie(prediccion):	|
+|	Danaus plexippus	|
+================================
+
+================================	BIEN
+|	image	: 001.png	|
+|	especie(prediccion):	|
+|	Heliconius charitonius	|
+================================
+
+================================	BIEN
+|	image	: 002.png	|
+|	especie(prediccion):	|
+|	Heliconius erato	|
+================================
+
+================================	MAL
+|	image	: 003.png	|
+|	especie(prediccion):	|
+|	Vanessa cardui	|
+================================
+	
+================================	BIEN
+|	image	: 004.png	|
+|	especie(prediccion):	|
+|	Lycaena phlaeas	|
+================================
+
+================================	BIEN
+|	image	: 005.png	|
+|	especie(prediccion):	|
+|	Nymphalis antiopa	|
+================================
+
+================================	BIEN
+|	image	: 006.png	|
+|	especie(prediccion):	|
+|	Papilio cresphontes	|
+================================
+
+================================	BIEN
+|	image	: 007.png	|
+|	especie(prediccion):	|
+|	Pieris rapae	|
+================================
+
+================================	BIEN
+|	image	: 008.png	|
+|	especie(prediccion):	|
+|	Vanessa atalanta	|
+================================
+
+================================	BIEN
+|	image	: 009.png	|
+|	especie(prediccion):	|
+|	Vanessa cardui	|
+================================
+
