@@ -15,9 +15,9 @@ void write_pixel3d(int x, int y, int z){
 //********FUNCIONES PARA TRAZADO DE CIRCUNFERENCIA*******//
 //CONFIGURACIONES DE VENTANA 2D
 void init(void){
-    glClearColor(1.0,1.0,1.0,0.0);
-    glMatrixMode(GL_PROJECTION);
-    gluOrtho2D(-200.0,200.0,-200.0,200.0);
+   glClearColor(1.0,1.0,1.0,0.0);
+   glMatrixMode(GL_PROJECTION);
+   gluOrtho2D(-200.0,200.0,-200.0,200.0);
 }
 
 //FUNCION PARA PINTAR UN PIXEL
@@ -31,7 +31,7 @@ void write_pixel(int x, int y){
 
 //ALGORITMO BASICO INCREMENTAL PARA DIBUJO DE LINEAS
 void basic_incremental_alg (int x1, int y1, int x2, int y2){
-    double x=0,y=0,valor;
+   double x=0,y=0,valor;
 	float m;
 	m=(y2-y1)/(x2-x1);
 	for(x=x1;x<=x2;x++){
@@ -101,19 +101,18 @@ void circle(int r){
     }
 }
 
-
 void display(){
 	glClear(GL_COLOR_BUFFER_BIT);
-    glColor3f(1.0,0.0,0.0);
-    glPointSize(3);
-    ///PARA LINEAS
-    basic_incremental_alg(45,45,145,145);
-    glColor3f(0.18,0.2,0.65);
-    mid_point_alg(20,20,146,94);
-    ///PARA CIRCUNFERENCIA
-    glColor3f(0.18,0.67,0.65);
-    circle(50);
-    glFlush();
+   glColor3f(1.0,0.0,0.0);
+   glPointSize(3);
+   ///PARA LINEAS
+   basic_incremental_alg(45,45,145,145);
+   glColor3f(0.18,0.2,0.65);
+   mid_point_alg(20,20,146,94);
+   ///PARA CIRCUNFERENCIA
+   glColor3f(0.18,0.67,0.65);
+   circle(50);
+   glFlush();
 }
 
 int main (int argc, char** argv){
