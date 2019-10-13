@@ -18,12 +18,12 @@ void linea3D(int x0, int y0, int z0, int x1, int y1, int z1){
    dy=y1,y0;
    m=dy/dx;
    //PARA GRAFICAR LA LINEA , SOLO SON PUNTOS MAS NO UN  PLANO (QUE DEBERIA SER EN 3D)
-//   for (z=z0; z<=z1; z+=0.1){
+   for (z=z0; z<=z1; z+=0.1){
       for (x=x0; x<=x1;x+=0.1){
          y=(y0+m*(x-x0));
-         glVertex3f(x,y,x);
+         glVertex3f(x,y,z);
       }
-  // }
+   }
    glEnd();
 }
 
