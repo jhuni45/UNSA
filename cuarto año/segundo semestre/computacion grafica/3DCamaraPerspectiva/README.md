@@ -59,7 +59,7 @@ case GLUT_KEY_F4:
 
 
 ### Referencias
-* [Material enviado por profesor] ![]()
+* [Material enviado por profesor] [Práctica guía](https://github.com/jhuni45/UNSA/blob/master/cuarto%20a%C3%B1o/segundo%20semestre/computacion%20grafica/3DCamaraPerspectiva/images/1573833859784_capitulo4.pdf)
 * [Manejo de teclado y ratón] https://www.opengl.org/resources/libraries/glut/spec3/node54.html
 * [Modelo solido de ejemplo] https://www.opengl.org/resources/libraries/glut/spec3/node85.html#SECTION000125000000000000000
   ```cpp
