@@ -3,7 +3,7 @@
 #include <GL/glu.h>
 #include <GL/glut.h>
 #include <stdio.h>
-#define NO_POINTS 10
+#define NO_POINTS 8
 
 int x[100],y[100];
 int q=0,k=0;
