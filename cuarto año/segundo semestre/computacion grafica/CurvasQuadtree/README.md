@@ -3,7 +3,7 @@
   - Se insertan puntos y se va generando curvas
   - Se puede mover los puntos para ver como se altera
 ### 1. Funciones importantes
- - Esta determinado por la siguiente porción de código
+ - Esta determinado por la siguiente porción de código (Bezier)
  ```cpp
 void bern(){
 	double t;
@@ -23,6 +23,20 @@ void bern(){
 	}
 }
 ```
+ - Esta determinado por la siguiente porción de código (Casteljau)
+  ```cpp
+void deCas(){
+	double t;
+	for(t=0;t<=1.0;t=t+0.001){
+		currentX=(1-t)*((1-t)*((1-t)*x[0]+t*x[1])+t*((1-t)*x[1]+t*x[2]))+t*((1-t)*((1-t)*x[1]+t*x[2])+t*((1-t)*x[2]+t*x[3]));
+		currentY=(1-t)*((1-t)*((1-t)*y[0]+t*y[1])+t*((1-t)*y[1]+t*y[2]))+t*((1-t)*((1-t)*y[1]+t*y[2])+t*((1-t)*y[2]+t*y[3]));
+		drawLine(oldX,720-oldY,currentX,720-currentY);
+		oldX=currentX;
+		oldY=currentY;
+	}
+}
+```
+
 
 ### Pruebas
 #### Prueba (inserción y mover puntos)
