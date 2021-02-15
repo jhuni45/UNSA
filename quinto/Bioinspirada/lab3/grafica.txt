@@ -1,0 +1,128 @@
+digraph a {
+	rankdir=LR;
+	size="8,5"
+	node [shape = doublecircle]; D;
+	node [shape = circle];
+	A -> C [ label = "0-1"] ;
+	A -> E [ label = "1-1"] ;
+	B -> B [ label = "1-0"] ;
+	B -> A [ label = "0-0"] ;
+	C -> E [ label = "1-0"] ;
+	C -> A [ label = "0-1"] ;
+	D -> A [ label = "0-1"] ;
+	D -> C [ label = "1-0"] ;
+	E -> C [ label = "0-1"] ;
+	E -> B [ label = "1-1"] ;
+}
+
+digraph a {
+	rankdir=LR;
+	size="8,5"
+	node [shape = doublecircle]; C;
+	node [shape = circle];
+	A -> C [ label = "0-1"] ;
+	A -> E [ label = "1-1"] ;
+	B -> B [ label = "1-0"] ;
+	B -> A [ label = "0-0"] ;
+	C -> E [ label = "1-0"] ;
+	C -> A [ label = "0-1"] ;
+	D -> A [ label = "0-1"] ;
+	D -> C [ label = "1-1"] ;
+	E -> C [ label = "0-1"] ;
+	E -> B [ label = "1-1"] ;
+}
+
+digraph a {
+	rankdir=LR;
+	size="8,5"
+	node [shape = doublecircle]; C;
+	node [shape = circle];
+	A -> C [ label = "0-1"] ;
+	A -> E [ label = "1-1"] ;
+	B -> B [ label = "1-0"] ;
+	B -> A [ label = "0-0"] ;
+	C -> E [ label = "1-0"] ;
+	C -> A [ label = "0-1"] ;
+	E -> C [ label = "0-1"] ;
+	E -> B [ label = "1-1"] ;
+}
+
+digraph a {
+	rankdir=LR;
+	size="8,5"
+	node [shape = doublecircle]; C;
+	node [shape = circle];
+	A -> C [ label = "0-1"] ;
+	A -> E [ label = "1-1"] ;
+	B -> B [ label = "1-0"] ;
+	B -> A [ label = "0-0"] ;
+	C -> E [ label = "1-0"] ;
+	C -> A [ label = "0-1"] ;
+	D -> A [ label = "0-1"] ;
+	D -> C [ label = "1-0"] ;
+	E -> C [ label = "0-1"] ;
+	E -> B [ label = "1-1"] ;
+}
+
+digraph a {
+	rankdir=LR;
+	size="8,5"
+	node [shape = doublecircle]; D;
+	node [shape = circle];
+	A -> C [ label = "0-1"] ;
+	A -> E [ label = "1-1"] ;
+	B -> B [ label = "1-0"] ;
+	B -> A [ label = "0-0"] ;
+	C -> E [ label = "1-0"] ;
+	C -> A [ label = "0-1"] ;
+	D -> A [ label = "0-1"] ;
+	D -> C [ label = "1-0"] ;
+	E -> C [ label = "0-1"] ;
+	E -> B [ label = "1-1"] ;
+}
+
+digraph a {
+	rankdir=LR;
+	size="8,5"
+	node [shape = doublecircle]; C;
+	node [shape = circle];
+	A -> C [ label = "0-1"] ;
+	A -> E [ label = "1-1"] ;
+	B -> B [ label = "1-0"] ;
+	B -> A [ label = "0-0"] ;
+	C -> E [ label = "1-0"] ;
+	C -> A [ label = "0-1"] ;
+	E -> C [ label = "0-1"] ;
+	E -> B [ label = "1-1"] ;
+}
+
+digraph a {
+	rankdir=LR;
+	size="8,5"
+	node [shape = doublecircle]; C;
+	node [shape = circle];
+	A -> C [ label = "0-1"] ;
+	A -> E [ label = "1-1"] ;
+	B -> B [ label = "1-0"] ;
+	B -> A [ label = "0-0"] ;
+	C -> E [ label = "1-0"] ;
+	C -> A [ label = "0-1"] ;
+	E -> C [ label = "0-1"] ;
+	E -> B [ label = "1-1"] ;
+}
+
+digraph a {
+	rankdir=LR;
+	size="8,5"
+	node [shape = doublecircle]; C;
+	node [shape = circle];
+	A -> C [ label = "0-1"] ;
+	A -> E [ label = "1-1"] ;
+	B -> B [ label = "1-0"] ;
+	B -> A [ label = "0-0"] ;
+	C -> E [ label = "1-0"] ;
+	C -> A [ label = "0-1"] ;
+	E -> C [ label = "0-1"] ;
+	E -> B [ label = "1-1"] ;
+}
+

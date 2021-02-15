@@ -87,7 +87,7 @@ int main(int argc, char* argv[]) {
 #  ifdef DEBUG
       Print_vector("The product is", y, m);
 #  else
-/*    Print_vector("The product is", y, m); */
+    Print_vector("The product is", y, m); 
 #  endif
 
    free(A);
@@ -152,7 +152,7 @@ void Gen_matrix(double A[], int m, int n) {
    int i, j;
    for (i = 0; i < m; i++)
       for (j = 0; j < n; j++)
-         A[i*n+j] = random()/((double) RAND_MAX);
+         A[i*n+j] = 1;
 }  /* Gen_matrix */
 
 /*------------------------------------------------------------------
@@ -165,7 +165,7 @@ void Gen_matrix(double A[], int m, int n) {
 void Gen_vector(double x[], int n) {
    int i;
    for (i = 0; i < n; i++)
-      x[i] = random()/((double) RAND_MAX);
+      x[i] = 1;
 }  /* Gen_vector */
 
 /*------------------------------------------------------------------
